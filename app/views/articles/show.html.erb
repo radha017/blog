@@ -1,0 +1,16 @@
+<div class="abc">
+<div class="art-cont">
+  <h3 class="text-center">
+    <%= @article.name %>
+  </h3>
+  <hr>
+  <p class="justify">
+    <%= simple_format(@article.body) %>
+  </p>
+  <div class="d-flex justify-content-between">
+   <%= button_to 'Edit', edit_article_path(@article), class: "btn btn-success",  method: :get %>
+   <%= button_to 'Delete', delete_article_path(@article), class: "btn btn-danger", method: :delete %>
+  </div>
+
+   </div>
+</div>

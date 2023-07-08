@@ -1,0 +1,23 @@
+<div class="abc">
+<div class="art-cont ">
+
+<%= form_with model: @article, url: update_article_path(@article), local: true do |f| %>
+  <p>
+    <%= f.label :name , class: "fw-bold"%><br>
+    <%= f.text_field :name, class: "form-control" %>
+  </p>
+
+  <p>
+    <%= f.label :Content, class: "fw-bold" %><br>
+    <%= f.text_area :body, class: "form-control" %>
+  </p>
+<div class="d-flex justify-content-between">
+  <p>
+    <%= f.submit class: "btn btn-dark" %>
+  </p>
+  <%= button_to "Cancel", articles_path, class: "btn btn-danger" %>
+  </div>
+<% end %>
+
+</div>
+</div>

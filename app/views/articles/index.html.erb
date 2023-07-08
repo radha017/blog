@@ -1,0 +1,13 @@
+
+<div class="abc">
+<div class="art-cont">
+<h2 class="text-center">Flavors of the World: A Culinary Journey Across Cultures</h2>
+<hr>
+
+<% @articles.each do |article| %>
+    <span> <%= link_to article.name, show_path(article.id) %></span><br>
+    <span><%= truncate(article.body, length: 100) %></span>
+    <hr>
+ <%end%>
+</div>
+</div>
